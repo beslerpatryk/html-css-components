@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  width: 500px;
+}
+
+.top {
+  text-align: center;
+}
+
+.top-text p {
+  margin: 0;
+  padding: 0;
+}
+
+.top-text p:nth-child(2) {
+  margin-top: 1vh;
+  display: inline-block;
+}
+
+.o-auth {
+  margin: 1.2rem 0;
+  display: grid;
+  grid-template: 1fr /1fr 1ch 1fr;
+}
+
+.o-auth span {
+  grid-column: 2/3;
+}
+
+.o-auth .twitter {
+  grid-column: 1/2;
+}
+
+.o-auth .facebook {
+  grid-column: 3/4;
+}
+
+.o-auth a {
+  margin: 1rem 0;
+  color: black;
+  text-decoration: none;
+  background-color: lightgray;
+  padding: 0.5rem 2rem;
+  border-radius: 3px;
+}
+
+.o-auth i {
+  margin-right: 1ch;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+}
+
+.form-container input {
+  border-radius: 5px;
+  padding: 12px 15px;
+}
+.form-container input:focus {
+  outline: none;
+}
+
+.names {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem 0;
+}
+
+.names #first-name {
+  margin: 0;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  width: 95%;
+}
+
+.names #last-name {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  width: 95%;
+}
