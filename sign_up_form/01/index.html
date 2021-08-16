@@ -14,43 +14,46 @@
     <div class="container">
 
         <div class="top">
-            <h1>Get started</h2>
+            <h1>Get started</h1>
             <div class="top-text">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <p>Already have an account?</p>
                 <a href="#">Login</a>
             </div>
         </div>
-        <div class="o-auth">
-            <a href="#" class="twitter"><i class="fab fa-twitter"></i>Join using Twitter</a>
-            <a href="#" class="facebook"><i class="fab fa-facebook-square"></i>Join using Facebook</a>
-             <span> or </span>
-
-        </div>
-
+       
 
         <div class="form-container">
             <form action="" method="post">
-                <div class="names">
-                    <label for="first-name" >First name</label>
-                    <input id="first-name" type="text" name="first-name">
-                    
-                    <label for="last-name">Last name</label>
-                    <input id="last-name" type="text" name="last-name">
-                </div>
                 
-                <label for="email">Email</label>
+                <a href="#" class="twitter"><i class="fab fa-twitter"></i>Join using Twitter</a>
+                <a href="#" class="facebook"><i class="fab fa-facebook-square"></i>Join using Facebook</a>
+
+                <span> or </span>
+
+                
+                <label id="first-name-label" for="first-name" >First name</label>
+                <input id="first-name" type="text" name="first-name">
+                
+                <label id="last-name-label" for="last-name">Last name</label>
+                <input id="last-name" type="text" name="last-name">
+            
+                
+                <label id="email-label" for="email">Email</label>
                 <input id="email" type="email" name="email" placeholder="email@myemail.com">
 
-                <label for="password" >Password</label>
+                <label id="password-label" for="password" >Password</label>
                 <input id="password" type="password" name="password">
-                <p>Minimum 6 characters</p>
+                <span>Minimum 6 characters</span>
 
-                <input type="radio" name="notify">
-                <label for="notify" >Send me updates about {productName}</label>
+                <div class="send-updates">
+                    <input id="notify" type="radio" name="notify">
+                    <label id="notify-label"for="notify" >Send me updates about {productName}</label>
+                </div>
 
-                <input type="submit" name="submit"></input type="submit">
-                <p>By joining, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a></p>
+                <input id="submit" type="submit" name="submit" value="Join" >
+                
+                <p id="privacy-policy">By joining, you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a></p>
             </form>
         </div>
     </div>
