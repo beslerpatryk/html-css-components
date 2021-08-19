@@ -65,6 +65,12 @@ form i {
   margin-right: 1ch;
 }
 
+.twitter:hover,
+.facebook:hover {
+  transition: 0.3s ease;
+  transform: scale(0.98);
+}
+
 .form-container input:not(#notify) {
   border-radius: 5px;
   padding: 12px 15px;
@@ -92,6 +98,10 @@ form {
 
 form label {
   margin-top: 0.7rem;
+}
+
+form input {
+  font-size: 1rem;
 }
 
 .twitter {
@@ -184,6 +194,16 @@ form span:nth-of-type(2) {
   background-color: var(--submit-color);
   border: none;
   font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#submit:hover {
+  background-color: #3781f4;
+}
+
+#submit:active {
+  transform: scale(0.98);
 }
 
 #privacy-policy {
