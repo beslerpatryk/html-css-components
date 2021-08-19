@@ -17,12 +17,10 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  overflow: hidden;
   margin: 0;
 }
 
 .container {
-  width: 600px;
   font-size: 1rem;
 }
 
@@ -58,7 +56,6 @@ body {
   text-decoration: none;
   background-color: var(--secondary-color);
   border-radius: 3px;
-  font-size: 1.3rem;
   text-align: center;
 }
 
@@ -88,9 +85,8 @@ form i {
 form {
   margin-top: 1.5rem;
   display: grid;
-  grid-template:
-    1fr 2ch 2ch 1fr 2ch 1fr 2ch 1fr 2ch 1fr 1fr 2ch
-    /1fr 1ch 1fr;
+  grid-template-columns: 1fr 2ch 1fr;
+  grid-template-rows: 1fr 2ch 2ch 1fr 2ch 1fr 2ch 1fr 2ch 1fr 1fr 2ch;
   row-gap: 1rem;
 }
 
@@ -201,4 +197,119 @@ form span:nth-of-type(2) {
 
 #privacy-policy a {
   color: var(--submit-color);
+}
+
+@media (max-width: 500px) {
+  body {
+    margin: 2rem 0;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2ch 2ch 1fr 2ch 1fr 2ch 1fr 2ch 1fr 2ch 1fr 1fr 2ch;
+    row-gap: 1rem;
+  }
+
+  .twitter {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .facebook {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .form-container span:nth-of-type(1) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  #first-name-label {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  #first-name {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+
+  #last-name-label {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+
+  #last-name {
+    grid-column: 1/2;
+    grid-row: 7/8;
+  }
+
+  #email-label {
+    grid-column: 1/2;
+    grid-row: 8/9;
+  }
+
+  #email {
+    grid-row: 9/10;
+    grid-column: 1/2;
+  }
+
+  #password-label {
+    grid-column: 1/2;
+    grid-row: 10/11;
+  }
+
+  #password {
+    grid-row: 11/12;
+    grid-column: 1/2;
+  }
+
+  form span:nth-of-type(2) {
+    grid-row: 12/13;
+    grid-column: 1/2;
+
+    margin-top: -0.7rem;
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+    color: #868884;
+  }
+
+  .send-updates {
+    grid-column: 1/2;
+    grid-row: 13/14;
+
+    margin: 1rem 0;
+  }
+
+  .send-updates input[type='radio'] {
+    border-radius: 3px;
+    border: 1px solid var(--primary-color);
+    padding: 0.5em;
+    margin-top: -3px;
+    vertical-align: middle;
+    -webkit-appearance: none;
+  }
+
+  #submit {
+    grid-row: 14/15;
+    grid-column: 1/2;
+
+    color: #fff;
+    background-color: var(--submit-color);
+    border: none;
+    font-size: 1.5rem;
+  }
+
+  #privacy-policy {
+    grid-row: 15/16;
+    grid-column: 1/2;
+
+    margin: 0;
+    text-align: center;
+    color: #868884;
+  }
 }
