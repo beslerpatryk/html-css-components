@@ -53,6 +53,10 @@ select {
   cursor: pointer;
 }
 
+select:focus {
+  outline: none;
+}
+
 option:hover {
   background-color: red;
 }
@@ -167,6 +171,16 @@ button i {
   margin: 3rem 0 0 0;
   font-size: 0.5rem;
   width: 70%;
+}
+
+.credits {
+  margin-top: 3rem;
+}
+
+.credits a {
+  font-size: 0.5rem;
+  display: block;
+  text-align: center;
 }
 
 @media (min-width: 850px) {
