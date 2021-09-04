@@ -7,8 +7,8 @@ console.log(document.activeElement)
 
 var activeElement = document.activeElement 
 
-emailInput.addEventListener('click', higlight)
-passInput.addEventListener('click', higlight)
+emailInput.addEventListener('focus', higlight)
+passInput.addEventListener('focus', higlight)
 
 let active
 
