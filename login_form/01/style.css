@@ -1,0 +1,180 @@
+@import url('http://fonts.cdnfonts.com/css/graphik');
+
+:root {
+  --primary-color: #156c6a;
+  --secondary-color: #2e1361;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Graphik', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  color: var(--secondary-color);
+  border: 6px solid #083725;
+  border-radius: 20px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 1080px;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 2rem;
+}
+
+.left .logo {
+  margin-bottom: 2.5rem;
+  font-weight: 700;
+}
+
+.left h1 {
+  margin: 0.8rem 0 0.4rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0;
+}
+
+.left .top p {
+  font-size: 0.7rem;
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs label:not(.checkbox) {
+  font-size: 0.6rem;
+  opacity: 0.25;
+  padding: 0.5rem 0.3rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 2px solid var(--secondary-color);
+}
+
+.inputs input:not(#checkbox) {
+  width: 100%;
+  border: none;
+}
+
+.inputs input:focus {
+  outline: none;
+}
+
+.inputs label.active {
+  opacity: 1;
+  border: 2px solid var(--primary-color);
+}
+
+.password-control {
+  font-size: 0.7rem;
+  font-family: inherit;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.password-control.checkbox {
+  display: inline;
+  font-weight: 500;
+}
+
+.password-control a {
+  text-decoration: none;
+  font-weight: 400;
+
+  display: inline;
+  opacity: 0.5;
+  color: var(--secondary-color);
+}
+
+.buttons-container {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2ch;
+}
+
+.buttons-container button {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 0.7rem;
+  color: var(--secondary-color);
+
+  padding: 0.7rem 0.5rem;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 2px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.buttons-container .login {
+  color: white;
+  background-color: var(--primary-color);
+}
+
+.privacy-policy {
+  margin: 2rem 0 0 0;
+  font-size: 0.6rem;
+}
+
+.privacy-policy a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+img {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  body {
+    margin: 0 3rem;
+  }
+
+  .container {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  .left {
+    height: 100%;
+    justify-content: space-around;
+    padding-right: 6rem;
+  }
+
+  .left h1 {
+    font-size: 2rem;
+  }
+
+  .left .top p {
+    font-size: 0.8rem;
+  }
+
+  .left label:not(.checkbox) {
+    font-size: 0.6rem;
+  }
+
+  img {
+    display: initial;
+    max-width: 100%;
+    vertical-align: top;
+  }
+}
