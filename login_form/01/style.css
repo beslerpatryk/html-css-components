@@ -82,6 +82,7 @@ body {
   width: 100%;
   border: none;
   font-family: inherit;
+  background-color: white;
 }
 
 .inputs input:focus {
@@ -92,6 +93,21 @@ body {
   opacity: 1;
   color: var(--secondary-color);
   border: 2px solid var(--primary-color);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: var(--secondary-color) !important;
+}
+
+input:auto {
+  background: transparent;
 }
 
 input:read-write {
