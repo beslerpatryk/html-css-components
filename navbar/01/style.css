@@ -11,13 +11,13 @@
 }
 
 body {
-    max-width: 1500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
     margin: 2rem;
     font-family: 'Karla', sans-serif;
+}
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
 }
 
 header {
