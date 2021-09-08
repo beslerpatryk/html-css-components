@@ -182,6 +182,18 @@ input:read-write {
   display: none;
 }
 
+.credits {
+  margin-top: 3rem;
+}
+
+.credits a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.5rem;
+  display: block;
+  text-align: center;
+}
+
 @media (min-width: 1000px) {
   body {
     margin: 0 3rem;
