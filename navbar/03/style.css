@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* GENERAL STYLING */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    padding: 5rem;
+    color: white;
+    background: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 1)
+        ),
+        url(images/background-nw.png);
+}
+
+button,
+li,
+a {
+    font-family: inherit;
+    color: white;
+}
+
+/* MAIN -- CONTENT */
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header .logo {
+    margin-right: auto;
+    font-size: 2rem;
+}
+
+header .logo i {
+    transform: scale(1.2);
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0 3rem;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+}
+
+nav a:hover {
+    font-weight: 500;
+    border-bottom: solid 1px white;
+}
+
+/* MAIN -- CONTENT */
+
+main {
+    align-self: flex-start;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    transform: translateY(-5%);
+    position: relative;
+}
+
+main h1 {
+    display: inline;
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+main p {
+    margin: 3rem 0;
+    line-height: 2rem;
+    width: 28rem;
+}
+
+main .buttons {
+    display: flex;
+}
+
+main .buttons button:nth-of-type(1) {
+    padding: 1rem 2rem;
+    color: white;
+    background: #1b5e20;
+    border: 0;
+    border-radius: 40px;
+    margin-right: 3rem;
+}
+
+main .buttons button:nth-of-type(2) {
+    background: transparent;
+    border: 0;
+}
