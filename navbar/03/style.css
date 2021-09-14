@@ -9,7 +9,7 @@
 body {
     font-family: 'Montserrat', sans-serif;
     height: 100vh;
-    padding: 5rem;
+    padding: clamp(2rem, 9vw, 5rem);
     color: white;
     background: rgb(0, 0, 0);
     background-repeat: no-repeat;
@@ -19,6 +19,7 @@ body {
             rgba(0, 0, 0, 1)
         ),
         url(images/background-nw.png);
+    overflow: hidden;
 }
 
 button,
@@ -31,12 +32,15 @@ a {
 /* MAIN -- CONTENT */
 
 header {
+    z-index: 99;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    transition: all 0.3s ease-in;
 }
 
 header .logo {
+    cursor: pointer;
     margin-right: auto;
     font-size: 2rem;
 }
@@ -45,19 +49,31 @@ header .logo i {
     transform: scale(1.2);
 }
 
+header button {
+    opacity: 0;
+}
+
+nav {
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
 nav ul {
     list-style: none;
+    transition: all 0.3s ease-in;
 }
 
 nav ul li {
     display: inline-block;
     padding: 0 3rem;
+    transition: all 0.3s ease-in;
 }
 
 nav a {
     color: white;
 
     text-decoration: none;
+    transition: all 0.3s ease-in;
 }
 
 nav a:hover {
@@ -68,6 +84,8 @@ nav a:hover {
 /* MAIN -- CONTENT */
 
 main {
+    max-width: 100%;
+
     align-self: flex-start;
     display: inline-flex;
     flex-direction: column;
@@ -80,10 +98,13 @@ main {
 main h1 {
     display: inline;
     font-size: 4rem;
+    font-size: clamp(2rem, 5vw, 4rem);
+
     font-weight: 800;
 }
 
 main p {
+    max-width: 100%;
     margin: 3rem 0;
     line-height: 2rem;
     width: 28rem;
@@ -100,9 +121,64 @@ main .buttons button:nth-of-type(1) {
     border: 0;
     border-radius: 40px;
     margin-right: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+main .buttons button:nth-of-type(1):hover {
+    background-color: #257e2b;
 }
 
 main .buttons button:nth-of-type(2) {
+    cursor: pointer;
+
     background: transparent;
     border: 0;
+}
+
+main .buttons button:nth-of-type(2):hover {
+    font-weight: 500;
+}
+
+@media (max-width: 1200px) {
+    /* body {
+        padding: 2rem;
+    } */
+
+    header {
+        position: relative;
+        justify-content: center;
+    }
+
+    header button {
+        position: absolute;
+        right: 0;
+        opacity: 1;
+
+        font-size: 1.5rem;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    header i {
+        cursor: pointer;
+    }
+
+    nav {
+        opacity: 1;
+        position: absolute;
+        right: 0;
+        top: 3rem;
+    }
+
+    nav ul {
+        text-align: right;
+    }
+
+    nav ul li {
+        display: block;
+        padding: 0;
+    }
 }
